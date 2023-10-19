@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="position-relative">
+        <!-- Form One -->
+        <form id="form-one" action="">
+          <div class="card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <img src="images/McAfee.png" alt="" height="30px" />
+              <img src="images/vivo-120.png" alt="" height="30px" />
+            </div>
+            <span class="fs-5 text-center"
+              >Consulta os vazamentos na dark web para o e-mail indicado.</span
+            >
+            <input
+              id="input-email"
+              type="email"
+              class="form-control form-control-lg"
+              required
+              placeholder="email@example.com"
+            />
+            <span class="text-center text-muted flex-fill">
+              O e-mail inserido será considerado para a criçã da sua conta no
+              serviço McAfee Privacy & Identity Guard.
+            </span>
+            <button id="validate-email" disabled class="btn btn-violet">
+              VERIFIQUE AGORA
+            </button>
+          </div>
+        </form>
+
+        <!-- Form Two -->
+        <form id="form-two" class="d-none" action="">
+          <div class="card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <img src="images/McAfee.png" alt="" height="30px" />
+              <img src="images/vivo-120.png" alt="" height="30px" />
+            </div>
+            <span class="fs-5 text-center"
+              >Foram encontrados <b id="tag-count"></b> vazamentos par o e-mail
+              informado!</span
+            >
+            <input
+              id="input-confirm-email"
+              type="email"
+              class="form-control form-control-lg"
+              required
+              placeholder="email@example.com"
+              disabled
+            />
+            <span class="text-center text-muted">
+              O e-mail informado será utilizado para criar a sua conta
+            </span>
+            <img src="images/criar.png" alt="" />
+            <span class="text-center text-muted flex-fill">
+              Para seguir com a sua conta, na tela "Entre em sua conta"
+              considere o fluxo "esqueceu a senha?" ou "código de acceso único".
+            </span>
+            <button id="confirm-email" class="btn btn-violet">
+              CRIAR CONTA COM ESSE E-MAIL
+            </button>
+            <button id="reset" type="button" class="btn text-primary">
+              Ou troque o e-mail considerado.
+            </button>
+          </div>
+        </form>
+
+        <!--Spinner-->
+        <div id="spinner" class="container-spinner invisible">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
